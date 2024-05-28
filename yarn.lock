@@ -12509,7 +12509,7 @@ style-to-object@^0.3.0, style-to-object@0.3.0:
   dependencies:
     inline-style-parser "0.1.1"
 
-"styled-components@>= 2", "styled-components@>= 5", styled-components@5.3.3:
+"styled-components@>= 1", "styled-components@>= 2", "styled-components@>= 5", styled-components@5.3.3:
   version "5.3.3"
   resolved "https://registry.npmjs.org/styled-components/-/styled-components-5.3.3.tgz"
   integrity sha512-++4iHwBM7ZN+x6DtPPWkCI4vdtwumQ+inA/DdAsqYd4SVgUKJie5vXyzotA00ttcFdQkCng7zc6grwlfIfw+lw==
@@ -12529,6 +12529,11 @@ styled-jsx@5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.0.0.tgz"
   integrity sha512-qUqsWoBquEdERe10EW8vLp3jT25s/ssG1/qX5gZ4wu15OZpmSMFI2v+fWlRhLfykA5rFtlJ1ME8A8pm/peV4WA==
+
+styled-media-query@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.npmjs.org/styled-media-query/-/styled-media-query-2.1.2.tgz"
+  integrity sha512-ds24iBxOrfIhdHP+e23y6kj1gbosgWu+tgAuxvMrYmnp6Sju/LjuY8lfkiVnn6P7mcdhtwpC2Z43o+apT9UdJg==
 
 supports-color@^5.3.0, supports-color@^5.5.0:
   version "5.5.0"
