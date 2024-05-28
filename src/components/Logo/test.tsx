@@ -20,4 +20,18 @@ describe('<Logo />', () => {
       color: '#030517'
     })
   })
+
+  it('Does it render a normal logo by default?', () => {
+    renderWithTheme(<Logo />)
+    expect(screen.getByLabelText(/Won Games Logo/i).parentElement).toHaveStyle({
+      width: '11rem'
+    })
+  })
+
+  it('Does it render a bigger logo when size param is passed?', () => {
+    renderWithTheme(<Logo size="large" />)
+    expect(screen.getByLabelText(/Won Games Logo/i).parentElement).toHaveStyle({
+      width: '20rem'
+    })
+  })
 })
