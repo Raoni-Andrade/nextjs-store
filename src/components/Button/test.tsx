@@ -54,13 +54,11 @@ describe('<Button />', () => {
   })
 
   it('Does it render the button as a link?', () => {
-    const { debug, container } = renderWithTheme(
+    renderWithTheme(
       <Button as="a" href="/link">
         Buy now
       </Button>
     )
-
-    debug(container)
 
     expect(screen.getByRole('link', { name: /buy now/i })).toHaveAttribute(
       'href',
