@@ -5,11 +5,10 @@ import { renderWithTheme } from 'utils/tests/helpers'
 
 describe('<Ribbon />', () => {
   it('Does it render the Ribbon text correctly?', () => {
-    const { debug, container } = renderWithTheme(<Ribbon>Best Seller</Ribbon>)
+    const { container } = renderWithTheme(<Ribbon>Best Seller</Ribbon>)
 
     expect(screen.getByText(/best seller/i)).toBeInTheDocument()
-
-    debug(container)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('Does it render the Ribbon with the primary color?', () => {
