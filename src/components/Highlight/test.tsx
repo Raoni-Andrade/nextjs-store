@@ -7,7 +7,8 @@ const props = {
   title: 'Red Dead it’s back',
   subtitle: 'Come see John’s new adventures',
   buttonLabel: 'Buy now',
-  buttonLink: '/rdr2'
+  buttonLink: '/rdr2',
+  backgroundImage: '/img/red-dead-img.jpg'
 }
 
 describe('<Highlight />', () => {
@@ -23,5 +24,13 @@ describe('<Highlight />', () => {
     ).toBeInTheDocument()
 
     expect(screen.getByRole('link', { name: /buy now/i })).toBeInTheDocument()
+  })
+
+  it('Does it render the background image?', () => {
+    const { container } = renderWithTheme(<Highlight {...props} />)
+
+    expect(container.firstChild).toHaveStyle({
+      backgroundImage: `url(${props.backgroundImage})`
+    })
   })
 })
