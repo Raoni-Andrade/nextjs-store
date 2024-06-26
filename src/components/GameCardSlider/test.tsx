@@ -55,4 +55,15 @@ describe('<GameCardSlider />', () => {
 
     expect(container.querySelectorAll('.slick-active')).toHaveLength(4)
   })
+
+  it('Does it render white arrows if color is passed', () => {
+    renderWithTheme(<GameCardSlider items={items} color="white" />)
+
+    expect(screen.getByLabelText(/previous games/i)).toHaveStyle({
+      color: '#FAFAFA'
+    })
+    expect(screen.getByLabelText(/next games/i)).toHaveStyle({
+      color: '#FAFAFA'
+    })
+  })
 })
