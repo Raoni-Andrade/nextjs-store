@@ -33,7 +33,7 @@ export default {
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
-      default: 'dark'
+      default: 'ray-dark'
     }
   }
 } as Meta

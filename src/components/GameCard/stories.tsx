@@ -17,7 +17,7 @@ export default {
   },
   parameters: {
     backgrounds: {
-      default: 'dark'
+      default: 'ray-dark'
     }
   }
 } as Meta
