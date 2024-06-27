@@ -10,52 +10,39 @@ import highlightMock from 'components/Highlight/mock'
 
 const props = {
   banners: bannerMock,
-  newGames: gamesMock,
+  newGames: [gamesMock[0]],
   mostPopularHighlight: highlightMock,
-  mostPopularGames: gamesMock,
-  upcomingGames: gamesMock,
+  mostPopularGames: [gamesMock[0]],
+  upcomingGames: [gamesMock[0]],
   upcomingHighlight: highlightMock,
-  upcomingMoreGames: gamesMock,
-  freeGames: gamesMock,
+  upcomingMoreGames: [gamesMock[0]],
+  freeGames: [gamesMock[0]],
   freeHighlight: highlightMock
 }
 
 describe('<Home />', () => {
-  it('Does it render Menu and Footer?', () => {
+  it('Does it render Menu, Footer, sections and its elements?', () => {
     renderWithTheme(<Home {...props} />)
 
     expect(screen.getByLabelText(/open menu/i)).toBeInTheDocument()
-
     expect(
       screen.getByRole('heading', { name: /follow us/i })
     ).toBeInTheDocument()
-
     expect(screen.getAllByRole('img', { name: /won games/i })).toHaveLength(2)
-  })
-
-  it('Does it render the sections?', () => {
-    renderWithTheme(<Home {...props} />)
 
     expect(screen.getByRole('heading', { name: /news/i })).toBeInTheDocument()
-
     expect(
       screen.getByRole('heading', { name: /most populars/i })
     ).toBeInTheDocument()
-
     expect(
       screen.getByRole('heading', { name: /upcoming/i })
     ).toBeInTheDocument()
-
     expect(
       screen.getByRole('heading', { name: /free games/i })
     ).toBeInTheDocument()
-  })
-
-  it('Does it render the section elements?', () => {
-    renderWithTheme(<Home {...props} />)
 
     expect(screen.getAllByText(/defy death 1/i)).toHaveLength(1)
-    expect(screen.getAllByText(/population zero/i)).toHaveLength(20)
-    expect(screen.getAllByText(/red dead is back!/i)).toHaveLength(3)
+    expect(screen.getAllByText(/population zero/i)).toHaveLength(5)
+    expect(screen.getAllByText(/red dead it’s back/i)).toHaveLength(3)
   })
 })
