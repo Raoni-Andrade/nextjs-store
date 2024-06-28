@@ -20,6 +20,7 @@ export const Input = styled.input`
     transition: background border ${theme.transition.fast};
     position: relative;
     outline: none;
+
     &:before {
       content: '';
       width: 0.6rem;
@@ -33,12 +34,20 @@ export const Input = styled.input`
       opacity: 0;
       transition: ${theme.transition.fast};
     }
+
     &:focus {
       box-shadow: 0 0 0.5rem ${theme.colors.primary};
     }
+
+    &:hover {
+      border-color: ${theme.colors.gray};
+      transition: ${theme.transition.fast};
+    }
+
     &:checked {
       border-color: ${theme.colors.primary};
       background: ${theme.colors.primary};
+
       &:before {
         opacity: 1;
       }
