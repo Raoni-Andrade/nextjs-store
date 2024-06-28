@@ -59,13 +59,13 @@ describe('<Checkbox />', () => {
     })
   })
 
-  it('Is it accessible with tab?', () => {
+  it('Is it accessible with tab?', async () => {
     renderWithTheme(<Checkbox label="Checkbox" labelFor="Checkbox" />)
 
+    expect(document.body).toHaveFocus()
     const checkbox = screen.getByLabelText(/checkbox/i)
-    checkbox.focus()
 
-    userEvent.tab()
+    await userEvent.tab()
 
     expect(checkbox).toHaveFocus()
   })
