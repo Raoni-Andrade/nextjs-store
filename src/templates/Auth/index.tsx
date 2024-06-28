@@ -17,7 +17,7 @@ const Auth = ({ title, children }: AuthProps) => (
         <strong>WON</strong> is the best and most complete gaming platform.
       </S.Subtitle>
 
-      <S.Footer>Won Games 2020 © Todos os Direitos Reservados</S.Footer>
+      <S.Footer>Raoni Andrade 2024 © All rights reserved.</S.Footer>
     </S.BannerBlock>
 
     <S.Content>
