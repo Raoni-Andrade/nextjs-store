@@ -5,11 +5,13 @@ import Logo from '.'
 import { renderWithTheme } from 'utils/tests/helpers'
 
 describe('<Logo />', () => {
+  it('Does it render the logo with id passed?', () => {
+    const { container } = renderWithTheme(<Logo id="myId" />)
+    expect(container.querySelector('#paint_linear_myId')).toBeInTheDocument()
+  })
+
   it('Does it render a white logo by default?', () => {
-    // renderizar o componente `render`
     renderWithTheme(<Logo />)
-    // selecionar o elemento a ser testado `screen` (queries) - getByLabel
-    // expect - assertion - asserção - comparação - análise (espero que renderize a logo branca)
     expect(screen.getByLabelText(/Won Games Logo/i).parentElement).toHaveStyle({
       color: '#FAFAFA'
     })
